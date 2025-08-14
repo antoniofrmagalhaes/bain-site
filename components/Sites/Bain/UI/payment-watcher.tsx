@@ -24,7 +24,7 @@ export default function PaymentWatcher() {
   const [transactionId, setTransactionId] = useState<string | null>(null);
   const [status, setStatus] = useState<'IDLE' | 'PENDING' | 'COMPLETED' | 'FAILED'>('IDLE');
   const [visible, setVisible] = useState(true);
-  const [attempts, setAttempts] = useState(0);
+  const [, setAttempts] = useState(0);
 
   useEffect(() => {
     const id = getCookie('transaction_id');
