@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Head>
         <title>BRASIL HELL | »BAIN« </title>
-        <meta name="description" content="O Melhor clan de hll do Brasil" />
+        <meta name="description" content="Venha para o clan que mais cresce no Brasil" />
         <meta
           name="keywords"
           content="hell let loose, bainclan, melhor server br de hell let loose, bastardos inglorios, marram, »BAIN«"
