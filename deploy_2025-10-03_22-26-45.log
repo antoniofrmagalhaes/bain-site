@@ -1,0 +1,77 @@
+
+up to date, audited 660 packages in 8s
+
+139 packages are looking for funding
+  run `npm fund` for details
+
+4 vulnerabilities (2 low, 1 moderate, 1 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+
+> rcon-dashboard@0.1.0 build
+> next build
+
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+  ▲ Next.js 14.2.31
+  - Environments: .env.production
+
+   Linting and checking validity of types ...
+
+./components/Sites/Bain/Layouts/PageLayout.tsx
+8:1  Warning: `../UI/payment-watcher` import should occur before import of `./Header`  import-helpers/order-imports
+
+./components/Sites/Bain/Pages/Home/index.tsx
+5:1  Warning: There should be at least one empty line between import groups  import-helpers/order-imports
+
+./components/Sites/Bain/UI/MobileSidebar.tsx
+12:1  Warning: `./BuyVip/BuyVipButton` import should occur before import of `./MobileSidebarButtonV2`  import-helpers/order-imports
+13:1  Warning: `./LiveGameButton` import should occur before import of `./MobileSidebarButtonV2`  import-helpers/order-imports
+
+./components/Sites/Bain/UI/VipPopup.tsx
+3:1  Warning: There should be at least one empty line between import groups  import-helpers/order-imports
+4:1  Warning: There should be at least one empty line between import groups  import-helpers/order-imports
+
+./components/Sites/Bain/UI/payment-watcher.tsx
+3:1  Warning: There should be at least one empty line between import groups  import-helpers/order-imports
+4:1  Warning: There should be at least one empty line between import groups  import-helpers/order-imports
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+   Creating an optimized production build ...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+ ✓ Compiled successfully
+   Collecting page data ...
+   Generating static pages (0/3) ...
+ ✓ Generating static pages (3/3)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (pages)                              Size     First Load JS
+┌ ○ / (547 ms)                             64.2 kB         267 kB
+├   /_app                                  0 B             203 kB
+└ ○ /404                                   181 B           203 kB
++ First Load JS shared by all              214 kB
+  ├ chunks/framework-64ad27b21261a9ce.js   44.9 kB
+  ├ chunks/main-1a27a703935a88c7.js        33.9 kB
+  ├ chunks/pages/_app-75c4a5aa4d6ea9b4.js  123 kB
+  ├ css/5441f0f69990ddb8.css               10.5 kB
+  └ other shared chunks (total)            1.04 kB
+
+○  (Static)  prerendered as static content
+
+./deploy.sh: line 48: pm2: command not found
+./deploy.sh: line 57: pm2: command not found
