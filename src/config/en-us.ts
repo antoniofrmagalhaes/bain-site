@@ -1,0 +1,114 @@
+// config/en-us.ts
+import { SiteContent } from "@/types/site-content";
+
+const enUsPageContent: SiteContent = {
+  layout: {},
+  welcome: {
+    title: "Welcome to the 2025 Season of Hell Let Loose Bain Server",
+    description:
+      "Join the epic battle on the Bain server! The 2025 season brings new strategies, updated maps, and a vibrant community. Get ready for action!",
+    cta: "View Fragments",
+  },
+  pages: {
+    home: {
+      hero: {
+        title: "Inglourious Basterds",
+        description:
+          "We cross the battlefield not out of a thirst for blood, but because we know glory belongs only to the brave who dare to face it.",
+        socialTitle: "Follow our social media",
+      },
+    },
+  },
+  ui: {
+    header: {
+      liveLabel: "LIVE MATCH",
+      liveDotA11y: "live",
+    },
+    buyVipForm: {
+      title: "VIP Access",
+      badgeText: "NO QUEUE",
+      heroText:
+        "By purchasing your VIP, you say goodbye to queues and head straight to the battlefield.",
+      instructions:
+        "Search for your name or paste your Steam ID/GamePass ID to locate your account. After selecting the player, provide your email to receive the payment link and VIP activation confirmation.",
+      idLabel: "Nickname, Steam ID, or GamePass ID",
+      idPlaceholder: "Paste your Steam ID or GamePass ID here",
+      conditionsTitle: "Conditions for purchasing VIP:",
+      conditions: [
+        "User must have played at least once on the server (appear as active).",
+        "Unfound or invalid IDs cannot proceed with the purchase.",
+      ],
+      emailLabel: "Email",
+      emailPlaceholder: "Enter your email",
+      emailHelp:
+        "Provide your email to receive the payment link and VIP activation confirmation.",
+      planLabel: "PLAN",
+      monthlyLabel: "Monthly",
+      quarterlyLabel: "Quarterly",
+      subtotalLabel: "SUBTOTAL",
+      discountLabel: "DISCOUNT",
+      totalLabel: "PLAN TOTAL",
+      submitLabel: "GENERATE PAYMENT LINK",
+      currency: "$",
+    },
+    buyVipButton: {
+      buttonText: "Buy VIP",
+      a11yDescription: "Open side panel to purchase VIP",
+    },
+    buyVipHelp: {
+      triggerLabel: "How to buy VIP?",
+      title: "How to Buy VIP",
+      description:
+        "Follow the steps to locate your ID, generate the payment, and confirm VIP activation.",
+      steps: [
+        {
+          title: "1) Find your ID",
+          body: "Search for your nickname and select from the list, or paste your SteamID64 (17 digits) or Epic ID (32 hexadecimal characters) directly.",
+          examples: [
+            "Ex. SteamID64: 76561198012345678",
+            "Ex. Epic ID (hex 32): 4f3a9b1c2d3e4f5a6b7c8d9e0a1b2c3d",
+            "Tip: with nickname, type 3+ letters to see suggestions",
+          ],
+        },
+        {
+          title: "2) Provide a valid email",
+          body: "Enter your email correctly — we will send the payment link and VIP activation confirmation.",
+          examples: [],
+        },
+        {
+          title: "3) Generate the link",
+          body: "Click “Generate payment link”. You will be redirected to the payment page and also receive the link via email. The link is valid for 24 hours.",
+          examples: [],
+        },
+        {
+          title: "4) Automatic activation",
+          body: "Once the payment is confirmed, your VIP is activated automatically.",
+          examples: [],
+        },
+        {
+          title: "5) How to verify activation",
+          body: "Search again for your nickname or ID. The VIP status and expiration date will be displayed.",
+          examples: [],
+        },
+      ],
+    },
+    cookieBanner: {
+      message:
+        "This site uses essential cookies to function and, with your consent, to remember your preferences. You can accept or reject.",
+      accept: "Accept",
+      reject: "Reject",
+      learnMoreLabel: "Learn more",
+      learnMoreHref: "/privacy-policy",
+    },
+    vipNotice: {
+      title: "NOTICE",
+      subtitle: "QUEUE-FREE ACCESS",
+      headline: "BUY VIP ON THE WEBSITE AND JOIN INSTANTLY.",
+      checkboxLabel: "Do not show again",
+      closeLabel: "CLOSE",
+      hotkeyLabel: "[Y]",
+    },
+  },
+};
+
+export default enUsPageContent;
