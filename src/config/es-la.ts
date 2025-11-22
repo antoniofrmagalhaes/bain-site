@@ -26,22 +26,21 @@ const esLaPageContent: SiteContent = {
     },
     buyVipForm: {
       title: "Acceso VIP",
-      badgeText: "SIN COLA",
+      badgeText: "SIN FILA",
       heroText:
-        "Al adquirir tu VIP, te despides de las colas y avanzas directamente al campo de batalla.",
+        "Al adquirir tu VIP, te despides de las filas y entras directamente al campo de batalla.",
       instructions:
-        "Busca tu nombre o pega tu Steam ID/GamePass ID para localizar tu cuenta. Después de seleccionar al jugador, proporciona tu correo electrónico para recibir el enlace de pago y la confirmación de activación del VIP.",
-      idLabel: "Apodo, ID de Steam o GamePass",
-      idPlaceholder: "Pega aquí tu ID de Steam o GamePass",
+        "Busca por tu nombre o pega tu Steam ID/Epic ID para encontrar tu cuenta. Después de seleccionar al jugador, ingresa tu correo electrónico para recibir el enlace de pago y la confirmación de la activación del VIP.",
+      idLabel: "Nickname, Steam ID o Epic ID",
+      idPlaceholder: "Pega aquí tu Nickname, Steam ID o Epic ID",
       conditionsTitle: "Condiciones para comprar VIP:",
       conditions: [
-        "El usuario debe haber jugado al menos una vez en el servidor (aparecer como activo).",
-        "Los ID no encontrados o inválidos no pueden proceder con la compra.",
+        "El usuario debe haber jugado al menos una vez en el servidor.",
       ],
       emailLabel: "Correo electrónico",
       emailPlaceholder: "Ingresa tu correo electrónico",
       emailHelp:
-        "Proporciona tu correo electrónico para recibir el enlace de pago y la confirmación de activación del VIP.",
+        "Ingresa el correo electrónico para recibir el enlace de pago y la confirmación de la activación del VIP.",
       planLabel: "PLAN",
       monthlyLabel: "Mensual",
       quarterlyLabel: "Trimestral",
@@ -49,7 +48,7 @@ const esLaPageContent: SiteContent = {
       discountLabel: "DESCUENTO",
       totalLabel: "TOTAL DEL PLAN",
       submitLabel: "GENERAR ENLACE DE PAGO",
-      currency: "$",
+      currency: "R$",
     },
     buyVipButton: {
       buttonText: "Comprar VIP",

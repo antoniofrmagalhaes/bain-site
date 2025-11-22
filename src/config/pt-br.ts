@@ -30,14 +30,11 @@ const ptBrPageContent: SiteContent = {
       heroText:
         "Ao adquirir seu VIP, você se despede das filas e avança diretamente para o campo de batalha.",
       instructions:
-        "Busque pelo seu nome ou cole o seu Steam ID/GamePass ID para localizar sua conta. Após selecionar o jogador, informe seu e-mail para receber o link de pagamento e a confirmação da ativação do VIP.",
-      idLabel: "Nickname, ID Steam ou GamePass",
-      idPlaceholder: "Cole aqui o ID Steam ou GamePass",
+        "Busque pelo seu nome ou cole o seu Steam ID/Epic ID para localizar sua conta. Após selecionar o jogador, informe seu e-mail para receber o link de pagamento e a confirmação da ativação do VIP.",
+      idLabel: "Nickname, ID Steam ou Epic ID",
+      idPlaceholder: "Cole aqui o seu Nickname, ID Steam ou Epic ID",
       conditionsTitle: "Condições para comprar VIP:",
-      conditions: [
-        "Usuário deve ter jogado pelo menos 1 vez no servidor (aparecer como ativo).",
-        "IDs não encontrados ou inválidos não podem prosseguir com a compra.",
-      ],
+      conditions: ["Usuário deve ter jogado pelo menos 1 vez no servidor."],
       emailLabel: "E-mail",
       emailPlaceholder: "Digite seu e-mail",
       emailHelp:

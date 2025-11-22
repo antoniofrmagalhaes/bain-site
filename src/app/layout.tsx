@@ -6,6 +6,7 @@ import SiteHeader from "@/components/site-header";
 import ApplicationProvider from "@/contexts/application-context";
 import CookieConsentBanner from "@/components/cookie-consent-banner";
 import VipNoticeDialog from "@/components/vip-notice-dialog";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,7 @@ export default function RootLayout({
           {children}
           <CookieConsentBanner />
           <VipNoticeDialog />
+          <Toaster position="bottom-right" />
         </ApplicationProvider>
       </body>
     </html>

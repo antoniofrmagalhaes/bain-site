@@ -1,14 +1,64 @@
 "use client";
 
-import React, { useMemo, useState, useCallback } from "react";
+import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { useApplication } from "@/contexts/application-context";
 import BuyVipPlayerIdInput from "./buy-vip-player-id-input";
+import { api } from "@/services/httpClient";
+import { toast } from "sonner";
+
+type RedirectToastProps = {
+  id: string | number;
+  paymentUrl: string;
+};
+
+function RedirectToast({ id, paymentUrl }: RedirectToastProps) {
+  const totalSeconds = 5;
+  const [seconds, setSeconds] = useState(totalSeconds);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setSeconds((prev) => {
+        if (prev <= 1) {
+          clearInterval(intervalId);
+          window.location.href = paymentUrl;
+          toast.dismiss(id);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [id, paymentUrl]);
+
+  const progress = ((totalSeconds - seconds) / totalSeconds) * 100;
+
+  return (
+    <div className="w-[320px] rounded-md border border-white/10 bg-[#141416] px-4 py-3 shadow-lg shadow-black/40">
+      <p className="text-sm font-semibold text-white">
+        Link de pagamento gerado
+      </p>
+      <p className="mt-1 text-xs text-white/80">
+        Redirecionando para o pagamento em {seconds}s...
+      </p>
+      <div className="mt-3 h-1.5 w-full rounded-full bg-white/10 overflow-hidden">
+        <div
+          className="h-full rounded-full bg-[#FFB430] transition-all duration-300"
+          style={{ width: `${progress}%` }}
+        />
+      </div>
+    </div>
+  );
+}
 
 export default function BuyVipForm() {
   const [isQuarterly, setIsQuarterly] = useState(false);
   const [playerId, setPlayerId] = useState("");
   const [email, setEmail] = useState("");
   const { pageContent } = useApplication();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const t = pageContent.ui.buyVipForm;
 
   const isSteamId = useCallback((v: string) => /^\d{17}$/.test(v.trim()), []);
@@ -40,10 +90,37 @@ export default function BuyVipForm() {
   return (
     <form
       className="flex h-full flex-col justify-between"
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault();
-        if (!formIsValid) return;
-        // aqui seguiria a chamada para gerar o PIX / link de pagamento
+        if (!formIsValid || isSubmitting) return;
+
+        try {
+          setIsSubmitting(true);
+          const purchasePlanType = isQuarterly ? "QUARTERLY" : "MONTHLY";
+          const payload = { playerId, email, purchasePlanType };
+
+          const response = await api.post("transactions/create", payload);
+          const { paymentUrl, id: transactionId } = response.data;
+
+          document.cookie = `transactionId=${transactionId}; path=/; max-age=1800`;
+
+          toast.custom(
+            (toastId) => <RedirectToast id={toastId} paymentUrl={paymentUrl} />,
+            {
+              duration: Infinity,
+            }
+          );
+        } catch (error: any) {
+          let description = "Ocorreu um erro ao iniciar a compra.";
+          if (error?.response?.data?.message) {
+            description = error.response.data.message;
+          } else if (error?.message) {
+            description = error.message;
+          }
+          alert(`${description} Tente novamente em instantes.`);
+        } finally {
+          setIsSubmitting(false);
+        }
       }}
     >
       <div className="space-y-6">
@@ -157,11 +234,11 @@ export default function BuyVipForm() {
 
         <button
           type="submit"
-          disabled={!formIsValid}
-          aria-disabled={!formIsValid}
+          disabled={!formIsValid || isSubmitting}
+          aria-disabled={!formIsValid || isSubmitting}
           className={[
             "mt-2 inline-flex w-full items-center justify-center rounded-md px-4 py-3 text-[15px] font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFB430]/70",
-            formIsValid
+            formIsValid && !isSubmitting
               ? "bg-[#FFB430] text-black hover:brightness-105"
               : "bg-[#FFB430]/50 text-black/70 cursor-not-allowed",
           ].join(" ")}
@@ -171,7 +248,7 @@ export default function BuyVipForm() {
               : undefined
           }
         >
-          {t.submitLabel}
+          {isSubmitting ? "Gerando link de pagamento..." : t.submitLabel}
         </button>
       </div>
     </form>

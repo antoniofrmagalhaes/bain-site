@@ -26,30 +26,28 @@ const dePageContent: SiteContent = {
     },
     buyVipForm: {
       title: "VIP-Zugang",
-      badgeText: "KEINE WARTEZIEIT",
+      badgeText: "KEINE WARTESCHLANGE",
       heroText:
-        "Mit dem Kauf deines VIPs verabschiedest du dich von Warteschlangen und gehst direkt ins Schlachtfeld.",
+        "Mit einem VIP-Zugang verabschiedest du dich von Warteschlangen und gehst direkt auf das Schlachtfeld.",
       instructions:
-        "Suche nach deinem Namen oder füge deine Steam ID/GamePass ID ein, um dein Konto zu finden. Nachdem du den Spieler ausgewählt hast, gib deine E-Mail-Adresse ein, um den Zahlungslink und die Bestätigung der VIP-Aktivierung zu erhalten.",
-      idLabel: "Nickname, Steam ID oder GamePass ID",
-      idPlaceholder: "Füge hier deine Steam ID oder GamePass ID ein",
+        "Suche nach deinem Namen oder füge deine Steam-ID/Epic-ID ein, um dein Konto zu finden. Nachdem du den Spieler ausgewählt hast, gib deine E-Mail-Adresse ein, um den Zahlungslink und die Bestätigung deiner VIP-Aktivierung zu erhalten.",
+      idLabel: "Nickname, Steam-ID oder Epic-ID",
+      idPlaceholder:
+        "Füge hier deinen Nickname, deine Steam-ID oder Epic-ID ein",
       conditionsTitle: "Bedingungen für den VIP-Kauf:",
-      conditions: [
-        "Der Benutzer muss mindestens einmal auf dem Server gespielt haben (als aktiv erscheinen).",
-        "Nicht gefundene oder ungültige IDs können nicht mit dem Kauf fortfahren.",
-      ],
+      conditions: ["Du musst mindestens einmal auf dem Server gespielt haben."],
       emailLabel: "E-Mail",
       emailPlaceholder: "Gib deine E-Mail-Adresse ein",
       emailHelp:
-        "Gib deine E-Mail-Adresse an, um den Zahlungslink und die Bestätigung der VIP-Aktivierung zu erhalten.",
+        "Gib deine E-Mail-Adresse ein, um den Zahlungslink und die Bestätigung deiner VIP-Aktivierung zu erhalten.",
       planLabel: "PLAN",
       monthlyLabel: "Monatlich",
       quarterlyLabel: "Vierteljährlich",
       subtotalLabel: "ZWISCHENSUMME",
       discountLabel: "RABATT",
-      totalLabel: "GESAMTPLAN",
-      submitLabel: "ZAHLUNGSLINK GENERIEREN",
-      currency: "€",
+      totalLabel: "GESAMTBETRAG DES PLANS",
+      submitLabel: "ZAHLUNGS-LINK ERSTELLEN",
+      currency: "R$",
     },
     buyVipButton: {
       buttonText: "VIP kaufen",
