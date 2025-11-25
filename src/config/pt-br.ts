@@ -95,7 +95,7 @@ const ptBrPageContent: SiteContent = {
       accept: "Aceitar",
       reject: "Recusar",
       learnMoreLabel: "Saiba mais",
-      learnMoreHref: "/politica-de-privacidade",
+      learnMoreHref: "/politicas-de-privacidade",
     },
     vipNotice: {
       title: "AVISO",
