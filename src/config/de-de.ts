@@ -12,7 +12,7 @@ const dePageContent: SiteContent = {
   pages: {
     home: {
       hero: {
-        title: "Inglourious Basterds",
+        title: "Bastardos Inglórios",
         description:
           "Wir durchqueren das Schlachtfeld nicht aus Blutdurst, sondern weil wir wissen, dass Ruhm nur den Mutigen gehört, die es wagen, ihm entgegenzutreten.",
         socialTitle: "Folge uns in den sozialen Medien",
@@ -96,7 +96,7 @@ const dePageContent: SiteContent = {
       accept: "Akzeptieren",
       reject: "Ablehnen",
       learnMoreLabel: "Erfahre mehr",
-      learnMoreHref: "/datenschutzrichtlinie",
+      learnMoreHref: "/politicas-de-privacidade",
     },
     vipNotice: {
       title: "HINWEIS",

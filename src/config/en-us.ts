@@ -12,7 +12,7 @@ const enUsPageContent: SiteContent = {
   pages: {
     home: {
       hero: {
-        title: "Inglourious Basterds",
+        title: "Bastardos Inglórios",
         description:
           "We cross the battlefield not out of a thirst for blood, but because we know glory belongs only to the brave who dare to face it.",
         socialTitle: "Follow our social media",
@@ -95,7 +95,7 @@ const enUsPageContent: SiteContent = {
       accept: "Accept",
       reject: "Reject",
       learnMoreLabel: "Learn more",
-      learnMoreHref: "/privacy-policy",
+      learnMoreHref: "/politicas-de-privacidade",
     },
     vipNotice: {
       title: "NOTICE",

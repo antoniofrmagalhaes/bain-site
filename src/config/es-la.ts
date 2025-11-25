@@ -12,7 +12,7 @@ const esLaPageContent: SiteContent = {
   pages: {
     home: {
       hero: {
-        title: "Bastardos sin Gloria",
+        title: "Bastardos Inglórios",
         description:
           "Cruzamos el campo de batalla no por sed de sangre, sino porque sabemos que la gloria solo pertenece a los valientes que se atreven a enfrentarla.",
         socialTitle: "Sigue nuestras redes sociales",
@@ -97,7 +97,7 @@ const esLaPageContent: SiteContent = {
       accept: "Aceptar",
       reject: "Rechazar",
       learnMoreLabel: "Saber más",
-      learnMoreHref: "/politica-de-privacidad",
+      learnMoreHref: "/politicas-de-privacidade",
     },
     vipNotice: {
       title: "AVISO",
